@@ -10,6 +10,9 @@
     <meta name="keywords" content="admin template, robust admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
     <title>Project Bugs Lists - Robust - Responsive Bootstrap 4 Admin Dashboard Template for Web Application</title>
+    <!-- start: bug and requirement card jQ-->            
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- end: bug and requirement card jQ -->      
     <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
     <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
     <link href="../../../../../../fonts.googleapis.com/css7024.css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CMuli:300,400,500,700" rel="stylesheet">
@@ -44,23 +47,27 @@
             display: none;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("select").change(function(){
-                $(this).find("option:selected").each(function(){
-                    var optionValue = $(this).attr("value");
-                    if(optionValue){
-                        $(".box").not("." + optionValue).hide();
-                        $("." + optionValue).show();
-                    } else{
-                        $(".box").hide();
-                    }
-                });
-            }).change();
-        });
-    </script>
     <!-- end: bug and requirement card jQ -->  
+
+    <!-- start: bug and requirement card jQ-->            
+
+	    <script>
+		        $(document).ready(function(){
+		            $("#drop-down-value").change(function(){
+		                $(this).find("option:selected").each(function(){
+		                    var optionValue = $(this).attr("value");
+		                    if(optionValue){
+		                        $(".box").not("." + optionValue).hide();
+		                        $("." + optionValue).show();
+		                    } else{
+		                        $(".box").hide();
+		                    }
+		                });
+		            }).change();
+		        });
+	    </script>
+
+    <!-- end: bug and requirement card jQ -->      
     
     
   </head>
@@ -1410,45 +1417,27 @@
 
 <!-- start: dropdown -->
                     <!--<button type="button" class="btn btn-outline-warning block btn-lg" data-toggle="modal" data-target="#bug-submit-form">-->
-                    <button class="btn-sm btn-primary" style="padding: 0px">
-                        <i id="add-btn" class="btn ft-plus white " data-toggle="modal" data-target="#bug-submit-form"></i>
-						<div class="btn dropdown" style="padding: 0px">
-							<select class="select2-placeholder form-control" id="drop-down-value" onchange="selectionchange()">
-								<optgroup>
-									<option value="Select">--Select--</option>
-                                    <option value="bugs">Bugs</option>
-									<option value="requirement">Requirement</option>
-								</optgroup>								
+                    
+                    <button class="btn btn-sm btn-primary" style="padding: 0px;margin: 0px">
+                        <i id="add-btn" class="btn ft-plus white " data-toggle="modal" data-target="#" style="display: none"></i>
+                    </button>                       
+                    
+                    <button class="btn btn-sm btn-primary" style="padding: 0px;margin: 0px">
+<!--                        <i id="add-btn" class="btn ft-plus white " data-toggle="modal" data-target="#" style="display: none;padding: 0px;margin: 0px"></i>-->
+						<div class="btn btn-sm btn-primary dropdown" style="padding: 0px;margin: 0px">
+							<select class="select2-placeholder form-control" id="drop-down-value" style="padding: 0px;margin: 0px" onchange="selectionchange()">
+
+									<option style="padding: 0px;margin: 0px" value="Select">--Select--</option>
+                                    <option style="padding: 0px;margin: 0px" value="bugs">Bugs</option>
+									<option style="padding: 0px;margin: 0px" value="requirement">Requirement</option>
+							
 							</select>
 						</div>
-                        
-                    
                     </button>    
 
 
-<script>
-    
-<!-- problem -->    
 
-function selectionchange()
-{
-    var v_list = document.getElementById("drop-down-value");
-    var str = v_list.options[v_list.selectedIndex].value;
-
-    if(str == 'Select')
-{
-       document.getElementById('add-btn').style.display='none';
-}
-else
-{
-   document.getElementById('add-btn').style.display='block'; 
-    //document.getElementById('btn').style.visibility='visible';
-}
- 
-}
-</script>
-                    
-                    
+        
                     
                     
 <!-- end: dropdown -->
@@ -1507,6 +1496,42 @@ else
 														<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
 													</div>
 												</div>
+
+
+<!-- start: asignee dropdown list -->
+<!-- problem -->
+<!--<div class="form-group position-relative has-icon-left" style="background-color: red"> -->                                             
+							<select class="select2-placeholder form-control " id="select-asignee">
+								<optgroup label="Alaskan/Hawaiian Time Zone">
+									<option value="AK">Alaska</option>
+									<option value="HI">Hawaii</option>
+								</optgroup>
+								<optgroup label="Pacific Time Zone">
+									<option value="CA">California</option>
+									<option value="OR">Oregon</option>
+									<option value="WA">Washington</option>
+								</optgroup>
+								<optgroup label="Mountain Time Zone">
+									<option value="AZ">Arizona</option>
+									<option value="UT">Utah</option>
+									<option value="WY">Wyoming</option>
+								</optgroup>
+								<optgroup label="Central Time Zone">
+									<option value="AL">Alabama</option>
+									<option value="SD">South Dakota</option>
+									<option value="TX">Texas</option>
+								</optgroup>
+								<optgroup label="Eastern Time Zone">
+									<option value="CT">Connecticut</option>
+									<option value="VT">Vermont</option>
+									<option value="VA">Virginia</option>
+									<option value="WV">West Virginia</option>
+								</optgroup>
+							</select>
+<!--</div>     -->                                               
+<!-- end: asignee dropdown list -->                                                    
+
+                                                
 											</div>
 											<div class="modal-footer">
 												<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="close">
@@ -2948,6 +2973,47 @@ else
     <script src="../../../app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <script src="../../../app-assets/js/scripts/forms/select/form-select2.min.js"></script>
     <!-- end: dropdown -->
+      
+<!-- start: show add button -->
+	<script>
+
+		function selectionchange()
+		{
+		    var v_list = document.getElementById("drop-down-value");
+		    var str = v_list.options[v_list.selectedIndex].value;
+		    console.log(str);
+
+		    if(str == 'Select')
+		{
+		       document.getElementById('add-btn').style.display='none';
+		}
+		else if(str == 'bugs')
+		{
+		   document.getElementById('add-btn').style.display='block';
+		    document.getElementById('add-btn').style.background='red';
+		    document.getElementById('add-btn').dataset.target="#bug-submit-form";
+		//    backOfferButton.dataset.target = "#addDifferentOffer";
+
+		}
+		else if(str == 'requirement')
+		{
+		   document.getElementById('add-btn').style.display='block';
+		    document.getElementById('add-btn').style.background='blue';
+		    document.getElementById('add-btn').dataset.target="#requirement-submit-form";
+
+		} 
+		}
+
+	</script>         
+	            
+<!-- end: show add button -->      
+      
+
+    <!-- start: bug and requirement card jQ-->            
+<!--	    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+    <!-- end: bug and requirement card jQ -->  
+      
+      
 
   </body>
 
