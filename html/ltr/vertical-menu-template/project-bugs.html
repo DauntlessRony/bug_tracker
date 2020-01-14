@@ -1470,12 +1470,9 @@
             
 <!-- start: bug card -->
 
-            <!-- start: bug-submit-form -->
-									<!-- Button trigger modal -->
-<!--									<button type="button" class="btn btn-outline-warning block btn-lg" data-toggle="modal" data-target="#bug-submit-form">
-										Launch Modal
-									</button>-->
-									<!-- Modal -->
+
+<!-- start: bug-submit-form -->
+
 									<div class="modal fade text-left" id="bug-submit-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel34" aria-hidden="true">
 									  <div class="modal-dialog" role="document">
 										<div class="modal-content">
@@ -1488,65 +1485,83 @@
 										  <form>
 											<div class="modal-body">
 
-												<div class="form-group position-relative has-icon-left">
-													<input type="text" placeholder="Email Address" class="form-control">
-													<div class="form-control-position">
-														<i class="fa fa-envelope font-medium-5 line-height-1 text-muted icon-align"></i>
-													</div>
-												</div>
+<!-- start: Issue Tracking -->
 
-												<div class="form-group position-relative has-icon-left">
-													<input type="password" placeholder="Password" class="form-control">
-													<div class="form-control-position">
-														<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
-													</div>
-												</div>
+                              <div class="form-body">
+
+								<div class="form-group">
+									<label for="issueinput1">Issue Title</label>
+									<input type="text" id="issueinput1" class="form-control" placeholder="issue title" name="issuetitle" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Issue Title">
+								</div>
+
+								<div class="form-group">
+									<label for="issueinput2">Opened By</label>
+									<input type="text" id="issueinput2" class="form-control" placeholder="opened by" name="openedby" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Opened By">
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="issueinput3">Date Opened</label>
+											<input type="date" id="issueinput3" class="form-control" name="dateopened" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Opened">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="issueinput4">Date Fixed</label>
+											<input type="date" id="issueinput4" class="form-control" name="datefixed" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Fixed">
+										</div>
+									</div>
+								</div>
 
 
-<!-- start: asignee dropdown list -->
-<!-- problem -->
-<!--<div class="form-group position-relative has-icon-left" style="background-color: red"> -->                                             
-							<select class="select2-placeholder form-control " id="select-asignee">
-								<optgroup label="Alaskan/Hawaiian Time Zone">
-									<option value="AK">Alaska</option>
-									<option value="HI">Hawaii</option>
-								</optgroup>
-								<optgroup label="Pacific Time Zone">
-									<option value="CA">California</option>
-									<option value="OR">Oregon</option>
-									<option value="WA">Washington</option>
-								</optgroup>
-								<optgroup label="Mountain Time Zone">
-									<option value="AZ">Arizona</option>
-									<option value="UT">Utah</option>
-									<option value="WY">Wyoming</option>
-								</optgroup>
-								<optgroup label="Central Time Zone">
-									<option value="AL">Alabama</option>
-									<option value="SD">South Dakota</option>
-									<option value="TX">Texas</option>
-								</optgroup>
-								<optgroup label="Eastern Time Zone">
-									<option value="CT">Connecticut</option>
-									<option value="VT">Vermont</option>
-									<option value="VA">Virginia</option>
-									<option value="WV">West Virginia</option>
-								</optgroup>
-							</select>
-<!--</div>     -->                                               
-<!-- end: asignee dropdown list -->                                                    
+								<div class="form-group">
+									<label for="issueinput5">Priority</label>
+									<select id="issueinput5" name="priority" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Priority">
+										<option value="low">Low</option>
+										<option value="medium">Medium</option>
+										<option value="high">High</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="issueinput6">Status</label>
+									<select id="issueinput6" name="status" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
+										<option value="not started">Not Started</option>
+										<option value="started">Started</option>
+										<option value="fixed">Fixed</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="issueinput8">Comments</label>
+									<textarea id="issueinput8" rows="5" class="form-control" name="comments" placeholder="comments" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Comments"></textarea>
+								</div>
+
+							</div>
+
+                                                
+                                                
+<!-- end: Issue Tracking -->
+                                           
 
                                                 
 											</div>
 											<div class="modal-footer">
-												<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="close">
-												<input type="submit" class="btn btn-outline-primary btn-lg" value="Login">
+							<div class="form-actions">
+								<button type="button" class="btn btn-warning mr-1">
+									<i class="ft-x"></i> Cancel
+								</button>
+								<button type="submit" class="btn btn-primary">
+									<i class="fa fa-check-square-o"></i> Save
+								</button>
+							</div>
 											</div>
 										  </form>
 										</div>
 									  </div>
 									</div>
-            <!-- end: bug-submit-form -->
+<!-- end: bug-submit-form -->
             
             
             <div id="bug-card" class="card-content bugs box " style="display: none">
@@ -1995,23 +2010,79 @@
 										  <form>
 											<div class="modal-body">
 
-												<div class="form-group position-relative has-icon-left">
-													<input type="text" placeholder="Email Address" class="form-control">
-													<div class="form-control-position">
-														<i class="fa fa-envelope font-medium-5 line-height-1 text-muted icon-align"></i>
-													</div>
-												</div>
 
-												<div class="form-group position-relative has-icon-left">
-													<input type="password" placeholder="Password" class="form-control">
-													<div class="form-control-position">
-														<i class="fa fa-lock font-large-1 line-height-1 text-muted icon-align"></i>
-													</div>
-												</div>
+<!-- start: Issue Tracking -->
+
+                              <div class="form-body">
+
+								<div class="form-group">
+									<label for="issueinput1">Issue Title</label>
+									<input type="text" id="issueinput1" class="form-control" placeholder="issue title" name="issuetitle" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Issue Title">
+								</div>
+
+								<div class="form-group">
+									<label for="issueinput2">Opened By</label>
+									<input type="text" id="issueinput2" class="form-control" placeholder="opened by" name="openedby" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Opened By">
+								</div>
+
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="issueinput3">Date Opened</label>
+											<input type="date" id="issueinput3" class="form-control" name="dateopened" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Opened">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="issueinput4">Date Fixed</label>
+											<input type="date" id="issueinput4" class="form-control" name="datefixed" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Date Fixed">
+										</div>
+									</div>
+								</div>
+
+
+								<div class="form-group">
+									<label for="issueinput5">Priority</label>
+									<select id="issueinput5" name="priority" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Priority">
+										<option value="low">Low</option>
+										<option value="medium">Medium</option>
+										<option value="high">High</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="issueinput6">Status</label>
+									<select id="issueinput6" name="status" class="form-control" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Status">
+										<option value="not started">Not Started</option>
+										<option value="started">Started</option>
+										<option value="fixed">Fixed</option>
+									</select>
+								</div>
+
+								<div class="form-group">
+									<label for="issueinput8">Comments</label>
+									<textarea id="issueinput8" rows="5" class="form-control" name="comments" placeholder="comments" data-toggle="tooltip" data-trigger="hover" data-placement="top" data-title="Comments"></textarea>
+								</div>
+
+							</div>
+
+                                                
+                                                
+<!-- end: Issue Tracking -->
+             
+
+                                                
+                                                
 											</div>
 											<div class="modal-footer">
-												<input type="reset" class="btn btn-outline-secondary btn-lg" data-dismiss="modal" value="close">
-												<input type="submit" class="btn btn-outline-primary btn-lg" value="Login">
+							<div class="form-actions">
+								<button type="button" class="btn btn-warning mr-1">
+									<i class="ft-x"></i> Cancel
+								</button>
+								<button type="submit" class="btn btn-primary">
+									<i class="fa fa-check-square-o"></i> Save
+								</button>
+							</div>
 											</div>
 										  </form>
 										</div>
@@ -2995,7 +3066,7 @@
 		else if(str == 'bugs')
 		{
 		   document.getElementById('add-btn').style.display='block';
-		    document.getElementById('add-btn').style.background='red';
+/*		    document.getElementById('add-btn').style.background='red';*/
 		    document.getElementById('add-btn').dataset.target="#bug-submit-form";
 		//    backOfferButton.dataset.target = "#addDifferentOffer";
 
@@ -3003,7 +3074,7 @@
 		else if(str == 'requirement')
 		{
 		   document.getElementById('add-btn').style.display='block';
-		    document.getElementById('add-btn').style.background='blue';
+/*		    document.getElementById('add-btn').style.background='blue';*/
 		    document.getElementById('add-btn').dataset.target="#requirement-submit-form";
 
 		} 
