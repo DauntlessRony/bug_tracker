@@ -1549,10 +1549,10 @@
 											</div>
 											<div class="modal-footer">
 							<div class="form-actions">
-								<button type="button" class="btn btn-warning mr-1">
+								<button type="button" id="frm-submit-new-bugs-btn-cancel" class="btn btn-warning mr-1">
 									<i class="ft-x"></i> Cancel
 								</button>
-								<button type="submit" class="btn btn-primary">
+								<button type="submit" id="frm-submit-new-bugs-btn-save" class="btn btn-primary">
 									<i class="fa fa-check-square-o"></i> Save
 								</button>
 							</div>
@@ -1562,6 +1562,25 @@
 									  </div>
 									</div>
 <!-- end: bug-submit-form -->
+<!--            
+	<script>
+
+		function reloadBugSubmitForm()
+		{
+        document.getElementById('add-btn').style.display='block';
+	    document.getElementById('frm-submit-new-bugs-btn-save').dataset.target="#bug-submit-form";
+		}
+
+	</script> 
+
+							<div class="form-actions">
+								<button type="button" id="frm-submit-new-bugs-btn-cencel" class="btn btn-warning mr-1">
+									<i class="ft-x"></i> Cancel
+								</button>
+								<button type="submit" id="frm-submit-new-bugs-btn-save" class="btn btn-primary">
+									<i class="fa fa-check-square-o"></i> Save
+								</button>
+							</div>	-->
             
             
             <div id="bug-card" class="card-content bugs box " style="display: none">
